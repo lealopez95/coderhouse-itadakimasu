@@ -131,7 +131,7 @@ main {
 .banner {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: min-content 1fr;
 	align-items: center;
 	justify-items: center;
 }
@@ -177,7 +177,7 @@ main {
 	align-items: center;
 	text-align: center;
 	font-size: 1.2rem;
-	width: 33%;
+	width: 50%;
 }
 
 .banner--inline .banner__textbox {
@@ -374,7 +374,6 @@ main {
 .menu__box--order {
 	background-color: unset;
 	border: none;
-	width: 90%;
 	margin: 0;
 }
 
@@ -383,11 +382,7 @@ main {
 }
 
 .menu__box__category {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin: 0 5%;
-	padding: 24px;
+	padding: 1rem 5rem;
 }
 
 .menu__box__category--background-lavander {
@@ -397,7 +392,7 @@ main {
 .menu__box__category__title {
 	border-bottom: #010101 1px solid;
 	font-size: 2rem;
-	width: 100%;
+	/* width: 100%; */
 }
 
 .menu__box__category__plates {
@@ -411,8 +406,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
-	width: 275px;
-	margin: 48px 20px;
+	padding: 1rem;
 }
 
 .menu__box__category__plates__item__img {
@@ -517,10 +511,7 @@ main {
 }
 
 .order__summary {
-	display: flex;
 	width: 90%;
-	align-items: flex-start;
-	gap: 30px;
 	margin-bottom: 2rem;
 	padding: 1.5rem;
 	background-color: white;
@@ -573,8 +564,13 @@ main {
 	text-align: center;
 }
 
-.order__summary__list__item--space-between {
-	justify-content: space-between;
+.order__summary__list__item--space-evenly {
+	justify-content: space-evenly;
+}
+
+.order__summary__list__item--wrap {
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .order__summary__list__item--end {
@@ -661,6 +657,14 @@ main {
 	.banner__images__img--top-back-right {
 		width: 80%;
 	}
+
+	.menu__box__category__plates__item__title {
+		font-size: 1.3rem;
+	}
+
+	.menu__box__category__plates__item__description {
+		font-size: 1rem;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -737,8 +741,17 @@ main {
 		width: 85%;
 	}
 
+	.menu__box__category {
+		padding: 2rem;
+	}
+
 	.menu__box__category__title {
 		text-align: center;
+	}
+
+	.menu__box__category__plates__item__img {
+		max-width: 200px;
+		height: auto;
 	}
 
 	.restaurants__box {
@@ -770,18 +783,12 @@ main {
 		align-items: center;
 	}
 
+	.order__summary__list__item.order__summary__list__item--end {
+		justify-content: center;
+	}
+
 	.menu__box__category__plates__item--inline {
 		width: 100%;
-	}
-
-	.footer__top {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.restaurants__box {
-		padding: 5rem 0;
 	}
 
 	.footer__top {
@@ -791,6 +798,12 @@ main {
 	.footer__top__section {
 		text-align: center;
 	}
+}
+
+@media screen and (max-width: 600px) {
+	.restaurants__box {
+		padding: 5rem 0;
+	}
 
 	.footer__bottom__list {
 		flex-direction: column;
@@ -799,6 +812,11 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+
+	.order__filters {
+		width: 90%;
+	}
+
 	.restaurants__box {
 		padding: 6rem 0;
 	}
