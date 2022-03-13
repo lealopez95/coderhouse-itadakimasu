@@ -286,9 +286,6 @@ main {
 }
 
 .contact-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	background-image: url('../media/images/backgrounds/sushi_background.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -296,48 +293,18 @@ main {
 }
 
 .contact-form__container {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 50px 0;
-	border-radius: 100px;
+	margin: 5rem 0;
+	border-radius: 50px;
 	
 }
 
 .contact-form__container--black {
 	background-color: #010101d1;
-	color: white;
 }
 
 .contact-form__container__title {
 	font-size: 1.6rem;
-}
-
-.contact-form__fields {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.contact-form__fields__item {
-	display: flex;
-	flex-direction: column;
-	margin: 10px 0;
-	align-items: flex-start;
-	width: 100%;
-}
-
-.contact-form__fields__item--button {
-	align-items: center;
-}
-
-.contact-form__fields__item input {
-	width: 100%;
-}
-
-.contact-form__fields__item--button input {
-	width: 50%;
+	color: #fefefe;
 }
 
 .find-us {
@@ -739,10 +706,6 @@ main {
 		gap: 25px;
 	}
 
-	.contact-form__container {
-		width: 70%;
-	}
-
 	.find-us {
 		grid-template-areas:
 			"find_us_title"
@@ -758,6 +721,10 @@ main {
 	.find-us__data {
 		align-items: center;
 		text-align: center;
+	}
+
+	.contact-form__container {
+		width: 85%;
 	}
 
 	.menu__box__category__title {
@@ -822,10 +789,6 @@ main {
 }
 
 @media screen and (max-width: 480px) {
-	.contact-form__container {
-		width: 85%;
-	}
-
 	.restaurants__box {
 		padding: 6rem 0;
 	}

@@ -47,35 +47,43 @@
 		</a>
 	</header>
 	<main>
-        <section class="contact-form">
-			<div class="contact-form__container contact-form__container--black">
-				<h1 class="contact-form__container__title">Env&iacute;anos tu consulta</h1>
-				<form action="javascript:alert('Enviamos tu mensaje!');" method="post">
-					<ul class="contact-form__fields">
-						<li class="contact-form__fields__item">
-							<label for="name">Nombre:</label>
-							<input type="text" id="name" name="name" placeholder="Tu nombre" required>
-						</li>
-						<li class="contact-form__fields__item">
-							<label for="email">Email:</label>
-							<input type="email" id="email" name="email" placeholder="email@email.com" required>
-						</li>
-						<li class="contact-form__fields__item">
-							<label for="phone">Tu tel&eacute;fono:</label>
-							<input type="tel" id="phone" name="phone" placeholder="Tu tel&eacute;fono" required>
-						</li>
-						<li class="contact-form__fields__item">
-							<label for="message">Tu mensaje:</label>
-							<textarea name="message" id="message" cols="30" rows="10" required></textarea>
-						</li>
-						<li class="contact-form__fields__item contact-form__fields__item--button">
-							<input type="submit" value="Enviar">
-						</li>
-					</ul>
-				</form>
+		<section class="contact-form container-fluid">
+			<div class="row justify-content-center">
+				<div class="contact-form__container contact-form__container--black col-sm-6">
+					<div class="row justify-content-center text-center">
+						<div class="col-sm-10 my-5">
+							<h1 class="contact-form__container__title">Env&iacute;anos tu consulta</h1>
+						</div>
+					</div>
+					<div class="row justify-content-center text-start">
+						<div class="col-sm-10">
+							<form action="javascript:alert('Enviamos tu mensaje!');" method="post">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
+									<label for="name" class="form-label">Nombre:</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="email" name="email" placeholder="email@email.com" required>
+									<label for="email" class="form-label">Email:</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="tel" class="form-control" id="phone" name="phone" placeholder="Tu tel&eacute;fono" required>
+									<label for="phone" class="form-label">Tu tel&eacute;fono:</label>
+								</div>
+								<div class="form-floating mb-3">
+									<textarea class="form-control" name="message" id="message" cols="30" rows="10" required></textarea>
+									<label for="message" class="form-label">Tu mensaje:</label>
+								</div>
+								<div class="mb-5 d-flex justify-content-center">
+									<button type="submit" class="btn btn-lg btn-light">Enviar</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-        </section>
-        <section class="find-us">
+		</section>
+		<section class="find-us">
 			<h2 class="find-us__title">D&oacute;nde estamos?</h2>
 			<iframe class="find-us__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5519.208023880021!2d-58.516064068465845!3d-34.661250258009744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc93a3ba895ab%3A0xf7aedd3fb3853a84!2sMcDonald&#39;s!5e0!3m2!1ses-419!2sar!4v1644042875935!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			<div class="find-us__data">
