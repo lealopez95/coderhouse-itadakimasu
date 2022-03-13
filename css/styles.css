@@ -45,7 +45,7 @@ body {
 		"section"
 		"main"
 		"footer";
-   grid-template-rows: 130px auto 1fr;
+   grid-template-rows: 130px auto auto 1fr;
    grid-template-columns: 100%;
 }
 
@@ -118,7 +118,7 @@ main {
 	bottom: 1rem;
 	right: 2rem;
 	background-color: #fefefe;
-	padding: 0.8rem 1rem;
+	padding: 0.5rem 0.7rem;
 	border: #010101 2px solid;
 	z-index: 10;
 }
@@ -664,11 +664,21 @@ main {
 }
 
 @media screen and (max-width: 767px) {
+
+	.body_grid_1_col {
+	   grid-template-rows: 90px auto auto 1fr;
+	   grid-template-columns: 100%;
+	}
+
 	.header {
 		grid-template-areas:
 			"nav header__logo header__basket";
 		grid-template-rows: auto;
 		grid-template-columns: min-content 1fr min-content;
+	}
+
+	.header__logo__img {
+		max-height: 90px;
 	}
 
 	.banner--inline {
