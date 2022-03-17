@@ -164,18 +164,18 @@
 		.banner__textbox__title {
 			z-index: 5;
 		}
-	}
-
-	&--background-img::before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
-		position: absolute;
-		z-index: 1;
 
 		& > * {
 			z-index: 5;
+		}
+		
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.3);
+			position: absolute;
+			z-index: 1;
 		}
 	}
 }
