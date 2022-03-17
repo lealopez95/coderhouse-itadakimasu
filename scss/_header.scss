@@ -43,15 +43,19 @@
 	width: 100%;
 }
 
-.navbar-nav .nav-item {
-	margin-left: 20px;
-	margin-right: 20px;
-}
+.navbar-light {
+	.navbar-nav {
+		.nav-item {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
 
-.navbar-light .navbar-nav .nav-link {
-	color: $red;
-}
+		.nav-link {
+			color: $red;
 
-.navbar-light .navbar-nav .nav-link.active {
-	color: $black;
+			&.active {
+				color: $black;
+			}
+		}
+	}
 }

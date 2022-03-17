@@ -64,15 +64,14 @@ main {
 .offcanvas-start {
   width: 100%; }
 
-.navbar-nav .nav-item {
+.navbar-light .navbar-nav .nav-item {
   margin-left: 20px;
   margin-right: 20px; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #ff0000; }
-
-.navbar-light .navbar-nav .nav-link.active {
-  color: #010101; }
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #010101; }
 
 #section {
   grid-area: section;
@@ -89,6 +88,8 @@ main {
   .back_to_top img {
     height: 30px;
     width: 30px; }
+  .back_to_top:hover {
+    cursor: pointer; }
 
 .banner {
   display: grid;
@@ -444,48 +445,37 @@ main {
   font-size: 1.3rem;
   background-color: #fefefe;
   border-top: 1px solid #555555; }
-
-.footer__top {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  align-items: center;
-  justify-items: center;
-  padding: 25px 5%;
-  grid-gap: 24px; }
-
-.footer__top__section {
-  text-align: left; }
-
-.footer__top__section--align-center {
-  text-align: center; }
-
-.footer__top__section__title {
-  margin-bottom: 20px; }
-
-.footer__logo__img {
-  width: 80%; }
-
-.footer__top__social {
-  margin: 5px; }
-
-.footer__top__social__img {
-  height: 30px;
-  width: 30px; }
-
-.footer__bottom {
-  background-color: #010101;
-  color: #fefefe; }
-
-.footer__bottom__list {
-  display: flex;
-  justify-content: center; }
-
-.footer__bottom__list__item {
-  margin: 5px 25px; }
-
-.footer__bottom__list__link {
-  color: #fefefe; }
+  .footer__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    padding: 25px 5%;
+    grid-gap: 24px; }
+    .footer__top__section {
+      text-align: left; }
+      .footer__top__section__title {
+        margin-bottom: 20px; }
+      .footer__top__section--align-center {
+        text-align: center; }
+    .footer__top__social {
+      margin: 5px; }
+      .footer__top__social__img {
+        height: 30px;
+        width: 30px; }
+  .footer__logo__img {
+    width: 80%; }
+  .footer__bottom {
+    background-color: #010101;
+    color: #fefefe; }
+    .footer__bottom__list {
+      display: flex;
+      justify-content: center; }
+      .footer__bottom__list__item {
+        margin: 5px 25px; }
+      .footer__bottom__list__link {
+        color: #fefefe; }
 
 @media screen and (max-width: 1024px) {
   .banner__images__img--front {
