@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "Kaushan";
+	src: url("../fonts/KaushanScript-Regular.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+
+	&:hover {
+		color: $salmon;
+	}
+}
+
+body {
+	font-family: Kaushan, sans-serif;
+	background-color: $white;
+	font-size: 1.2rem;
+}
+
+.body_grid_1_col {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"section"
+		"main"
+		"footer";
+   grid-template-rows: 130px auto auto 1fr;
+   grid-template-columns: 100%;
+}
+
+main {
+	grid-area: main;
+}
