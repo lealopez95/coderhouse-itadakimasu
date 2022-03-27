@@ -48,7 +48,8 @@ main {
   height: min-content; }
   .header__logo__img {
     grid-area: header__logo;
-    max-height: 130px; }
+    width: auto;
+    height: 130px; }
   .header__basket {
     grid-area: header__basket; }
     .header__basket__img {
@@ -498,7 +499,8 @@ main {
     grid-template-rows: auto;
     grid-template-columns: min-content 1fr min-content; }
     .header__logo__img {
-      max-height: 90px; }
+      width: auto;
+      height: 90px; }
   .banner__images {
     justify-content: center;
     padding: 0; }

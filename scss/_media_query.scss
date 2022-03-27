@@ -35,7 +35,7 @@
 		grid-template-columns: min-content 1fr min-content;
 
 		&__logo__img {
-			max-height: 90px;
+			@include setSizes(auto, 90px);
 		}
 	}
 

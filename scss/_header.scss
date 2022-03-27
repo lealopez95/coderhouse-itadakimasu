@@ -17,7 +17,7 @@
 
 	&__logo__img {
 		grid-area: header__logo;
-		max-height: 130px;
+		@include setSizes(auto, 130px);
 	}
 
 	&__basket {
