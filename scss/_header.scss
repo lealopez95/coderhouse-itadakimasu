@@ -24,7 +24,7 @@
 		grid-area: header__basket;
 
 		&__img {
-			@include setSizes("", 30px);
+			@include setSizes(30px, 30px);
 		}
 	}
 }
