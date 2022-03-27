@@ -13,7 +13,7 @@
 	background-color: $white;
 	border-bottom: 2px solid $gray;
 	z-index: 10;
-	height: min-content;
+	@include setSizes("", min-content);
 
 	&__logo__img {
 		grid-area: header__logo;
@@ -24,7 +24,7 @@
 		grid-area: header__basket;
 
 		&__img {
-			height: 30px;
+			@include setSizes("", 30px);
 		}
 	}
 }
@@ -40,7 +40,7 @@
 }
 
 .offcanvas-start {
-	width: 100%;
+	@include setSizes(100%);
 }
 
 .navbar-light {

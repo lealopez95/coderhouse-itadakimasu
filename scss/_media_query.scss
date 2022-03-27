@@ -2,11 +2,11 @@
 
 	.banner__images__img {
 		&--front {
-			width: 80%;
+			@include setSizes(80%);
 		}
 
 		&--top-back-right {
-			width: 80%;
+			@include setSizes(80%);
 		}
 	}
 
@@ -89,7 +89,7 @@
 		grid-template-columns: auto;
 
 		&__map {
-			width: 100%;
+			@include setSizes(100%);
 		}
 
 		&__data {
@@ -99,7 +99,7 @@
 	}
 
 	.contact-form__container {
-		width: 85%;
+		@include setSizes(85%);
 	}
 
 	.menu__box__category {
@@ -117,7 +117,7 @@
 				}
 
 				&--inline {
-					width: 100%;
+					@include setSizes(100%);
 				}
 			}
 		}
@@ -130,7 +130,7 @@
 		gap: 2rem;
 
 		&__item {
-			width: 90%;
+			@include setSizes(90%);
 		}
 	}
 
@@ -179,7 +179,7 @@
 @media screen and (max-width: 480px) {
 
 	.order__filters {
-		width: 90%;
+		@include setSizes(90%);
 	}
 
 	.restaurants__box {

@@ -32,14 +32,13 @@
 			margin: 5px;
 
 			&__img {
-				height: 30px;
-				width: 30px;
+				@include setSizes(30px, 30px);
 			}
 		}
 	}
 
 	&__logo__img {
-		width: 80%;
+		@include setSizes(80%);
 	}
 
 	&__bottom {

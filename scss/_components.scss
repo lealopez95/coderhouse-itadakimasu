@@ -13,8 +13,7 @@
 	z-index: 10;
 
 	img {
-		height: 30px;
-		width: 30px;
+		@include setSizes(30px, 30px);
 	}
 
 	&:hover {
@@ -36,7 +35,7 @@
 		border-radius: 50%;
 
 		&__logo {
-			width: 100%;
+			@include setSizes(100%);
 		}
 	}
 
@@ -46,7 +45,7 @@
 		align-items: center;
 		text-align: center;
 		font-size: 1.2rem;
-		width: 50%;
+		@include setSizes(50%);
 
 		&__title {
 			font-size: 2rem;
@@ -73,7 +72,7 @@
 
 		&__link {
 			display: block;
-			width: 200px;
+			@include setSizes(200px);
 			background-color: $red;
 			margin: 25px 0;
 			border-radius: 15px;
@@ -87,8 +86,7 @@
 				&:after {
 					content: "";
 					position: absolute;
-					width: 100%;
-					height: 3px;
+					@include setSizes(100%, 3px);
 					top: 100%;
 					left: 0;
 					background-color: $white;
@@ -112,12 +110,11 @@
 		padding: 25px 0;
 
 		&__img {
-			width: 400px;
-			height: 300px;
+			@include setSizes(400px, 300px);
 			border-radius: 25px;
 
 			&--front {
-				width: 70%;
+				@include setSizes(70%);
 				z-index: 1;
 				margin-top: 5%;
 			}
@@ -144,7 +141,7 @@
 		padding: 3rem 0;
 
 		.banner__textbox {
-			width: 75%;
+			@include setSizes(75%);
 			justify-self: end;
 		}
 
@@ -174,8 +171,7 @@
 		
 		&::before {
 			content: "";
-			width: 100%;
-			height: 100%;
+			@include setSizes(100%, 100%);
 			background-color: rgba(0, 0, 0, 0.3);
 			position: absolute;
 			z-index: 1;
@@ -192,7 +188,7 @@
 	padding: 25px 0;
 
 	&__container {
-		width: 100%;
+		@include setSizes(100%);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -210,7 +206,7 @@
 	}
 
 	&__img {
-		width: 200px;
+		@include setSizes(200px);
 		border-radius: 50%;
 		margin-bottom: 25px;
 	}
@@ -298,8 +294,7 @@
 			}
 
 			&__social__icon {
-				height: 30px;
-				width: 30px;
+				@include setSizes(30px, 30px);
 			}
 		}
 	}
@@ -317,12 +312,12 @@
 		align-items: center;
 		background-color: $white;
 		border: 4px double $salmon;
-		width: 80%;
+		@include setSizes(80%);
 		margin: 60px 0;
 		gap: 20px;
 
 		&__logo {
-			width: 275px;
+			@include setSizes(275px);
 		}
 
 		&__category {
@@ -346,7 +341,7 @@
 					padding: 1rem;
 
 					&__img {
-						width: 100%;
+						@include setSizes(100%);
 					}
 
 					&__title {
@@ -363,11 +358,11 @@
 					
 					&--inline {
 						flex-direction: row;
-						width: 560px;
+						@include setSizes(560px);
 						max-height: 200px;
 
 						.menu__box__category__plates__item__img {
-							width: 25%;
+							@include setSizes(25%);
 						}
 
 						.menu__box__category__plates__item__text {
@@ -404,7 +399,7 @@
 		padding: 2rem 0;
 
 		&__item {
-			width: 30%;
+			@include setSizes(30%);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -417,7 +412,7 @@
 			}
 
 			&__img {
-				height: 100%;
+				@include setSizes("", 100%);
 				max-width: 90%;
 			}
 
@@ -428,7 +423,7 @@
 			&__links {
 				display: flex;
 				justify-content: space-evenly;
-				width: 90%;
+				@include setSizes(90%);
 
 				&__text {
 					color: $red;
@@ -451,7 +446,7 @@
 	padding-top: 2rem;
 
 	&__filters {
-		width: 60%;
+		@include setSizes(60%);
 		display: grid;
 		grid-template-columns: max-content max-content;
 		justify-content: space-between;
@@ -461,7 +456,7 @@
 	}
 
 	&__summary {
-		width: 90%;
+		@include setSizes(90%);
 		margin-bottom: 2rem;
 		padding: 1.5rem;
 		background-color: $white;
@@ -470,11 +465,11 @@
 		&__list {
 			display: flex;
 			flex-direction: column;
-			width: 50%;
+			@include setSizes(50%);
 			align-items: flex-start;
 
 			&__box {
-				width: 100%;
+				@include setSizes(100%);
 			}
 
 			&__item {
@@ -503,11 +498,11 @@
 				}
 
 				&__trash {
-					width: 15px;
+					@include setSizes(15px);
 				}
 
 				&__qty {
-					width: 2.3rem;
+					@include setSizes(2.3rem);
 					text-align: center;
 				}
 

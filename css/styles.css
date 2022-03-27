@@ -86,8 +86,8 @@ main {
   border: #010101 2px solid;
   z-index: 10; }
   .back_to_top img {
-    height: 30px;
-    width: 30px; }
+    width: 30px;
+    height: 30px; }
   .back_to_top:hover {
     cursor: pointer; }
 
@@ -282,8 +282,8 @@ main {
       .find-us__data__section__contact a {
         color: #ff0000; }
       .find-us__data__section__social__icon {
-        height: 30px;
-        width: 30px; }
+        width: 30px;
+        height: 30px; }
 
 .menu {
   background-color: #ffeceb;
@@ -462,8 +462,8 @@ main {
     .footer__top__social {
       margin: 5px; }
       .footer__top__social__img {
-        height: 30px;
-        width: 30px; }
+        width: 30px;
+        height: 30px; }
   .footer__logo__img {
     width: 80%; }
   .footer__bottom {
