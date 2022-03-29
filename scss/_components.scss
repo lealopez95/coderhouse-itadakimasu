@@ -29,7 +29,7 @@
 	justify-items: center;
 
 	&__image {
-		background-color: $lavender-blush;
+		background-color: $linen;
 		text-align: center;
 		margin: 25px 0;
 		border-radius: 50%;
@@ -53,7 +53,7 @@
 			color: $white;
 
 			em {
-				color: $salmon;
+				color: $dark-orange;
 				font-weight: bold;
 			}
 
@@ -63,7 +63,7 @@
 		}
 
 		&__text {
-			color: $red;
+			color: $ruby-red;
 
 			&--light {
 				color: $white;
@@ -73,7 +73,7 @@
 		&__link {
 			display: block;
 			@include setSizes(200px);
-			background-color: $red;
+			background-color: $ruby-red;
 			margin: 25px 0;
 			border-radius: 15px;
 			padding: 20px;
@@ -150,16 +150,20 @@
 		}
 	}
 
-	&--background-lavender-blush {
-		background-color: $lavender-blush;
+	&--background-linen {
+		background-color: $linen;
 	}
 
 	&--background-img {
-		background-image: url('../media/images/backgrounds/food_grey_background.webp');
+		background-image: url('../media/images/backgrounds/flat-lay-sushi-arrangement-with-copy-space.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 		position: relative;
+
+		&--desing-2 {
+			background-image: url('../media/images/backgrounds/soy-sauce-and-soy-bean-on-wooden-table.jpg');
+		}
 
 		.banner__textbox__title {
 			z-index: 5;
@@ -172,10 +176,18 @@
 		&::before {
 			content: "";
 			@include setSizes(100%, 100%);
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: rgba(0, 0, 0, 0.4);
 			position: absolute;
 			z-index: 1;
 		}
+	}
+
+	&--fade-in {
+		@include setAnimation("fade-in");
+	}
+
+	&--fade-down {
+		@include setAnimation("fade-down");
 	}
 }
 
@@ -201,7 +213,7 @@
 
 	&__title {
 		margin-bottom: 50px;
-		color: $white;
+		color: $fire-opal;
 		font-size: 2rem;
 	}
 
@@ -212,12 +224,12 @@
 	}
 
 	&__text {
-		color:$red;
+		color: $fire-opal;
 	}
 }
 
 .contact-form {
-	background-image: url('../media/images/backgrounds/sushi_background.webp');
+	background-image: url('../media/images/backgrounds/Mitarashi+Dango.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -225,11 +237,7 @@
 	&__container {
 		margin: 5rem 0;
 		border-radius: 50px;
-		animation: fade-in;
-		animation-duration: 0.8s;
-		animation-iteration-count: 1;
-		animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-		animation-fill-mode: forwards;
+		@include setAnimation("fade-in-bounce");
 
 		&__title {
 			font-size: 1.6rem;
@@ -243,18 +251,6 @@
 	}
 }
 
-@keyframes fade-in {
-	0% {
-		transform: scale(0);
-		background-color: rgba(0, 0, 0, 0);
-		opacity: 0;
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-
 .find-us {
 	display: grid;
 	grid-template-columns: max-content max-content;
@@ -264,7 +260,7 @@
 		"find_us_map find_us_data";
 	padding: 50px 0;
 	grid-gap: 25px;
-	background-color: $lavender-blush;
+	background-color: $linen;
 	place-items: center;
 	place-content: center;
 
@@ -290,7 +286,7 @@
 			gap: 5px;
 
 			&__contact a {
-				color: $red;
+				color: $ruby-red;
 			}
 
 			&__social__icon {
@@ -301,7 +297,7 @@
 }
 
 .menu {
-	background-color: $lavender-blush;
+	background-color: $linen;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -311,7 +307,7 @@
 		flex-direction: column;
 		align-items: center;
 		background-color: $white;
-		border: 4px double $salmon;
+		border: 4px double $dark-orange;
 		@include setSizes(80%);
 		margin: 60px 0;
 		gap: 20px;
@@ -378,7 +374,7 @@
 			}
 
 			&--background-lavander {
-				background-color: $lavender-blush;
+				background-color: $linen;
 			}
 		}
 
@@ -426,7 +422,7 @@
 				@include setSizes(90%);
 
 				&__text {
-					color: $red;
+					color: $ruby-red;
 				}				
 			}
 		}
@@ -481,7 +477,7 @@
 				gap: 15px;
 
 				&__button{
-					background-color: $red;
+					background-color: $ruby-red;
 					border: unset;
 					padding: 20px;
 					line-height: 1rem;

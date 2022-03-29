@@ -51,10 +51,22 @@
 		}
 
 		.nav-link {
-			color: $red;
+			color: $ruby-red;
+			padding: 0 15px;
+
+			&:hover {
+				color: $dark-orange;
+			}
 
 			&.active {
-				color: $black;
+				border: #000000 1px solid;
+				border-radius: 100%;
+				background-color: $ruby-red;
+				color: $white;
+
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 	}

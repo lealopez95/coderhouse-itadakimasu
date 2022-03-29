@@ -1,3 +1,22 @@
+@keyframes fade-in {
+  0% {
+    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fade-down {
+  0% {
+    transform: scale(0);
+    transform: translatey(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 @font-face {
   font-family: "Kaushan";
   src: url("../fonts/KaushanScript-Regular.otf") format("opentype");
@@ -13,13 +32,13 @@ li {
 
 a {
   text-decoration: none;
-  color: #010101; }
+  color: #000000; }
   a:hover {
-    color: #ff8075; }
+    color: #ff8f1f; }
 
 body {
   font-family: Kaushan, sans-serif;
-  background-color: #fefefe;
+  background-color: #ffffff;
   font-size: 1.2rem; }
 
 .body_grid_1_col {
@@ -42,7 +61,7 @@ main {
   position: sticky;
   top: 0;
   padding: 0 2%;
-  background-color: #fefefe;
+  background-color: #ffffff;
   border-bottom: 2px solid #555555;
   z-index: 10;
   height: min-content; }
@@ -72,9 +91,17 @@ main {
   margin-right: 20px; }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #ff0000; }
+  color: #931621;
+  padding: 0 15px; }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #ff8f1f; }
   .navbar-light .navbar-nav .nav-link.active {
-    color: #010101; }
+    border: #000000 1px solid;
+    border-radius: 100%;
+    background-color: #931621;
+    color: #ffffff; }
+    .navbar-light .navbar-nav .nav-link.active:hover {
+      color: #ffffff; }
 
 #section {
   grid-area: section;
@@ -84,9 +111,9 @@ main {
   position: fixed;
   bottom: 1rem;
   right: 2rem;
-  background-color: #fefefe;
+  background-color: #ffffff;
   padding: 0.5rem 0.7rem;
-  border: #010101 2px solid;
+  border: #000000 2px solid;
   z-index: 10; }
   .back_to_top img {
     width: 30px;
@@ -101,7 +128,7 @@ main {
   align-items: center;
   justify-items: center; }
   .banner__image {
-    background-color: #ffeceb;
+    background-color: #FFF5EB;
     text-align: center;
     margin: 25px 0;
     border-radius: 50%; }
@@ -117,26 +144,26 @@ main {
     .banner__textbox__title {
       font-size: 2rem;
       font-weight: lighter;
-      color: #fefefe; }
+      color: #ffffff; }
       .banner__textbox__title em {
-        color: #ff8075;
+        color: #ff8f1f;
         font-weight: bold; }
       .banner__textbox__title--black {
-        color: #010101; }
+        color: #000000; }
     .banner__textbox__text {
-      color: #ff0000; }
+      color: #931621; }
       .banner__textbox__text--light {
-        color: #fefefe; }
+        color: #ffffff; }
     .banner__textbox__link {
       display: block;
       width: 200px;
-      background-color: #ff0000;
+      background-color: #931621;
       margin: 25px 0;
       border-radius: 15px;
       padding: 20px; }
       .banner__textbox__link__text {
         font-size: 1.6rem;
-        color: #fefefe;
+        color: #ffffff;
         position: relative; }
         .banner__textbox__link__text:after {
           content: "";
@@ -145,7 +172,7 @@ main {
           height: 3px;
           top: 100%;
           left: 0;
-          background-color: #fefefe;
+          background-color: #ffffff;
           transform: scaleX(0);
           transform-origin: right;
           transition: transform 0.5s; }
@@ -183,14 +210,16 @@ main {
       justify-self: end; }
     .banner--inline .banner__images {
       justify-self: start; }
-  .banner--background-lavender-blush {
-    background-color: #ffeceb; }
+  .banner--background-linen {
+    background-color: #FFF5EB; }
   .banner--background-img {
-    background-image: url("../media/images/backgrounds/food_grey_background.webp");
+    background-image: url("../media/images/backgrounds/flat-lay-sushi-arrangement-with-copy-space.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative; }
+    .banner--background-img--desing-2 {
+      background-image: url("../media/images/backgrounds/soy-sauce-and-soy-bean-on-wooden-table.jpg"); }
     .banner--background-img .banner__textbox__title {
       z-index: 5; }
     .banner--background-img > * {
@@ -199,15 +228,25 @@ main {
       content: "";
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.4);
       position: absolute;
       z-index: 1; }
+  .banner--fade-in {
+    animation: fade-in ease;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
+  .banner--fade-down {
+    animation: fade-down ease;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
 
 .testimonials {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #010101;
+  background-color: #000000;
   text-align: center;
   padding: 25px 0; }
   .testimonials__container {
@@ -220,17 +259,17 @@ main {
     max-width: 300px; }
   .testimonials__title {
     margin-bottom: 50px;
-    color: #fefefe;
+    color: #fd644c;
     font-size: 2rem; }
   .testimonials__img {
     width: 200px;
     border-radius: 50%;
     margin-bottom: 25px; }
   .testimonials__text {
-    color: #ff0000; }
+    color: #fd644c; }
 
 .contact-form {
-  background-image: url("../media/images/backgrounds/sushi_background.webp");
+  background-image: url("../media/images/backgrounds/Mitarashi+Dango.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -240,22 +279,13 @@ main {
     animation: fade-in;
     animation-duration: 0.8s;
     animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function: cubic-bezier(0.63, 0.22, 0.67, 1.5);
     animation-fill-mode: forwards; }
     .contact-form__container__title {
       font-size: 1.6rem;
-      color: #fefefe; }
+      color: #ffffff; }
     .contact-form__container--black {
       background-color: rgba(1, 1, 1, 0.8); }
-
-@keyframes fade-in {
-  0% {
-    transform: scale(0);
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0; }
-  100% {
-    transform: scale(1);
-    opacity: 1; } }
 
 .find-us {
   display: grid;
@@ -264,7 +294,7 @@ main {
   grid-template-areas: "find_us_title find_us_title" "find_us_map find_us_data";
   padding: 50px 0;
   grid-gap: 25px;
-  background-color: #ffeceb;
+  background-color: #FFF5EB;
   place-items: center;
   place-content: center; }
   .find-us__title {
@@ -283,13 +313,13 @@ main {
       flex-direction: column;
       gap: 5px; }
       .find-us__data__section__contact a {
-        color: #ff0000; }
+        color: #931621; }
       .find-us__data__section__social__icon {
         width: 30px;
         height: 30px; }
 
 .menu {
-  background-color: #ffeceb;
+  background-color: #FFF5EB;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -297,8 +327,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fefefe;
-    border: 4px double #ff8075;
+    background-color: #ffffff;
+    border: 4px double #ff8f1f;
     width: 80%;
     margin: 60px 0;
     gap: 20px; }
@@ -307,7 +337,7 @@ main {
     .menu__box__category {
       padding: 1rem 5rem; }
       .menu__box__category__title {
-        border-bottom: #010101 1px solid;
+        border-bottom: #000000 1px solid;
         font-size: 2rem; }
       .menu__box__category__plates {
         display: flex;
@@ -341,14 +371,14 @@ main {
               justify-content: flex-start;
               overflow-y: hidden; }
       .menu__box__category--background-lavander {
-        background-color: #ffeceb; }
+        background-color: #FFF5EB; }
     .menu__box--order {
       background-color: unset;
       border: none;
       margin: 0; }
 
 .restaurants {
-  background-color: #010101; }
+  background-color: #000000; }
   .restaurants__box {
     display: flex;
     justify-content: space-around;
@@ -360,7 +390,7 @@ main {
       align-items: center;
       justify-content: center;
       gap: 10px;
-      color: #fefefe; }
+      color: #ffffff; }
       .restaurants__box__item__title {
         font-size: 2rem; }
       .restaurants__box__item__img {
@@ -373,7 +403,7 @@ main {
         justify-content: space-evenly;
         width: 90%; }
         .restaurants__box__item__links__text {
-          color: #ff0000; }
+          color: #931621; }
 
 .order {
   display: grid;
@@ -391,14 +421,14 @@ main {
     display: grid;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
-    background-color: #fefefe;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 1rem; }
   .order__summary {
     width: 90%;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background-color: #fefefe;
+    background-color: #ffffff;
     border-radius: 1rem; }
     .order__summary__list {
       display: flex;
@@ -415,12 +445,12 @@ main {
         justify-content: flex-start;
         gap: 15px; }
         .order__summary__list__item__button {
-          background-color: #ff0000;
+          background-color: #931621;
           border: unset;
           padding: 20px;
           line-height: 1rem;
           border-radius: 15px;
-          color: #fefefe;
+          color: #ffffff;
           font-family: inherit;
           font-size: inherit;
           cursor: pointer;
@@ -446,7 +476,7 @@ main {
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   font-size: 1.3rem;
-  background-color: #fefefe;
+  background-color: #FFF5EB;
   border-top: 1px solid #555555; }
   .footer__top {
     display: grid;
@@ -470,15 +500,15 @@ main {
   .footer__logo__img {
     width: 80%; }
   .footer__bottom {
-    background-color: #010101;
-    color: #fefefe; }
+    background-color: #000000;
+    color: #ffffff; }
     .footer__bottom__list {
       display: flex;
       justify-content: center; }
       .footer__bottom__list__item {
         margin: 5px 25px; }
       .footer__bottom__list__link {
-        color: #fefefe; }
+        color: #ffffff; }
 
 @media screen and (max-width: 1024px) {
   .banner__images__img--front {
