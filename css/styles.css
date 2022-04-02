@@ -64,7 +64,7 @@ main {
   background-color: #ffffff;
   border-bottom: 2px solid #555555;
   z-index: 10;
-  height: min-content; }
+  height: 130px; }
   .header__logo__img {
     grid-area: header__logo;
     width: auto;
@@ -74,6 +74,48 @@ main {
     .header__basket__img {
       width: 30px;
       height: 30px; }
+    .header__basket__container {
+      background-color: #FFF5EB;
+      color: #931621; }
+    .header__basket__section {
+      display: flex;
+      flex-direction: column; }
+      .header__basket__section__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 0; }
+        .header__basket__section__list__item {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 15px; }
+          .header__basket__section__list__item__discount_code {
+            width: 50%; }
+          .header__basket__section__list__item__qty {
+            width: 2.3rem;
+            text-align: center; }
+          .header__basket__section__list__item__text {
+            margin: 1rem 0; }
+          .header__basket__section__list__item__icon {
+            width: 15px; }
+          .header__basket__section__list__item__button {
+            background-color: #931621;
+            border: unset;
+            padding: 20px;
+            line-height: 1rem;
+            border-radius: 15px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            margin-top: 24px; }
+          .header__basket__section__list__item--align_center {
+            justify-content: center; }
 
 .nav {
   font-size: 1.3rem;
@@ -424,51 +466,6 @@ main {
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 1rem; }
-  .order__summary {
-    width: 90%;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 1rem; }
-    .order__summary__list {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      align-items: flex-start; }
-      .order__summary__list__box {
-        width: 100%; }
-      .order__summary__list__item {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 15px; }
-        .order__summary__list__item__button {
-          background-color: #931621;
-          border: unset;
-          padding: 20px;
-          line-height: 1rem;
-          border-radius: 15px;
-          color: #ffffff;
-          font-family: inherit;
-          font-size: inherit;
-          cursor: pointer;
-          margin-top: 24px; }
-        .order__summary__list__item__title {
-          flex-basis: 60%; }
-        .order__summary__list__item__trash {
-          width: 15px; }
-        .order__summary__list__item__qty {
-          width: 2.3rem;
-          text-align: center; }
-        .order__summary__list__item--space-evenly {
-          justify-content: space-evenly; }
-        .order__summary__list__item--wrap {
-          justify-content: center;
-          flex-wrap: wrap; }
-        .order__summary__list__item--end {
-          justify-content: end; }
 
 .footer {
   grid-area: footer;
@@ -519,6 +516,10 @@ main {
     font-size: 1.3rem; }
   .menu__box__category__plates__item__description {
     font-size: 1rem; } }
+
+@media screen and (max-width: 991px) {
+  .navbar-light .navbar-nav .nav-item {
+    margin: 0 0.5rem; } }
 
 @media screen and (max-width: 767px) {
   .body_grid_1_col {
@@ -583,13 +584,6 @@ main {
     .order__filters {
       grid-template-columns: 1fr;
       justify-items: center; }
-    .order__summary {
-      flex-direction: column;
-      align-items: center; }
-      .order__summary__list {
-        align-items: center; }
-        .order__summary__list__item.order__summary__list__item--end {
-          justify-content: center; }
   .footer__top {
     grid-template-columns: 1fr; }
     .footer__top__section {
