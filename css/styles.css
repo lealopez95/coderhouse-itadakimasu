@@ -425,6 +425,8 @@ main {
               overflow-y: hidden; }
       .menu__box__category--background-lavander {
         background-color: #FFF5EB; }
+      .menu__box__category--red-border {
+        border: 4px double #931621; }
     .menu__box--order {
       background-color: unset;
       border: none;

@@ -376,6 +376,10 @@
 			&--background-lavander {
 				background-color: $linen;
 			}
+
+			&--red-border {
+				border: 4px double $ruby-red;
+			}
 		}
 
 		&--order {
