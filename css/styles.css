@@ -616,7 +616,9 @@ main {
     padding: 5rem 0; }
   .footer__bottom__list {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+  .banner__textbox {
+    width: 80%; } }
 
 @media screen and (max-width: 480px) {
   .footer__logo__img {
