@@ -76,8 +76,6 @@
 						line-height: 1rem;
 						border-radius: 15px;
 						color: $white;
-						font-family: inherit;
-						font-size: inherit;
 						cursor: pointer;
 						margin-top: 24px;
 					}
@@ -97,8 +95,8 @@
 }
 
 #navMainMenu .nav-item:hover {
-	transform: scale(1.2);
-	transition: transform 0.2s;
+	@include setZoomEffect(1.2);
+	
 }
 
 .offcanvas-start {

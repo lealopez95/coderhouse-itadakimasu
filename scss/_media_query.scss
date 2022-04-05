@@ -30,7 +30,7 @@
 @media screen and (max-width: 767px) {
 
 	.body_grid_1_col {
-	   grid-template-rows: 90px auto auto 1fr;
+	   grid-template-rows: min-content auto auto 1fr;
 	   grid-template-columns: 100%;
 	}
 
@@ -149,11 +149,21 @@
 		}
 	}
 
-	.footer__top {
-		grid-template-columns: 1fr;
+	.footer {
+		&__top {
+			grid-template-columns: 1fr;
 
-		&__section {
-			text-align: center;
+			&__section {
+				text-align: center;
+			}
+		}
+
+		address {
+			margin-bottom: 0;
+		}
+
+		ul {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -171,8 +181,16 @@
 
 @media screen and (max-width: 480px) {
 
+	.footer__logo__img {
+		@include setSizes(100%);
+	}
+
 	.order__filters {
 		@include setSizes(90%);
+	}
+
+	.banner__image {
+		@include setSizes(80%)
 	}
 
 	.restaurants__box {

@@ -6,6 +6,7 @@
 	font-size: 1.3rem;
 	background-color:$linen;
 	border-top: 1px solid $gray;
+	font-family: Vegur-regular, sans-serif;
 
 	&__top {
 		display: grid;
@@ -20,6 +21,7 @@
 			text-align: left;
 
 			&__title {
+				font-family: Kaushan, sans-serif;
 				margin-bottom: 20px;
 			}
 
@@ -30,9 +32,13 @@
 
 		&__social {
 			margin: 5px;
+			
 
 			&__img {
 				@include setSizes(30px, 30px);
+				&:hover {
+					@include setZoomEffect(1.2);
+				}
 			}
 		}
 	}
@@ -57,5 +63,9 @@
 				color: $white;
 			}
 		}
+	}
+
+	ul {
+		padding: 0;
 	}
 }

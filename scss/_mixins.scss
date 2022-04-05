@@ -51,3 +51,8 @@
         height: $height;
     }
 }
+
+@mixin setZoomEffect($scale) {
+    transform: scale($scale);
+	transition: transform 0.2s;
+}

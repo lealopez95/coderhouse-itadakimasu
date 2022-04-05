@@ -22,6 +22,16 @@
   src: url("../fonts/KaushanScript-Regular.otf") format("opentype");
   font-display: swap; }
 
+@font-face {
+  font-family: "Vegur-light";
+  src: url("../fonts/Vegur-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Vegur-regular";
+  src: url("../fonts/Vegur-regular.otf") format("opentype");
+  font-display: swap; }
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +50,9 @@ body {
   font-family: Kaushan, sans-serif;
   background-color: #ffffff;
   font-size: 1.2rem; }
+
+p {
+  font-family: Vegur-light, sans-serif; }
 
 .body_grid_1_col {
   display: grid;
@@ -110,8 +123,6 @@ main {
             line-height: 1rem;
             border-radius: 15px;
             color: #ffffff;
-            font-family: inherit;
-            font-size: inherit;
             cursor: pointer;
             margin-top: 24px; }
           .header__basket__section__list__item--align_center {
@@ -301,14 +312,14 @@ main {
     max-width: 300px; }
   .testimonials__title {
     margin-bottom: 50px;
-    color: #fd644c;
+    color: #ff8f1f;
     font-size: 2rem; }
   .testimonials__img {
     width: 200px;
     border-radius: 50%;
     margin-bottom: 25px; }
   .testimonials__text {
-    color: #fd644c; }
+    color: #ff8f1f; }
 
 .contact-form {
   background-image: url("../media/images/backgrounds/Mitarashi+Dango.jpg");
@@ -474,7 +485,8 @@ main {
   grid-template-rows: auto auto;
   font-size: 1.3rem;
   background-color: #FFF5EB;
-  border-top: 1px solid #555555; }
+  border-top: 1px solid #555555;
+  font-family: Vegur-regular, sans-serif; }
   .footer__top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -486,6 +498,7 @@ main {
     .footer__top__section {
       text-align: left; }
       .footer__top__section__title {
+        font-family: Kaushan, sans-serif;
         margin-bottom: 20px; }
       .footer__top__section--align-center {
         text-align: center; }
@@ -494,6 +507,9 @@ main {
       .footer__top__social__img {
         width: 30px;
         height: 30px; }
+        .footer__top__social__img:hover {
+          transform: scale(1.2);
+          transition: transform 0.2s; }
   .footer__logo__img {
     width: 80%; }
   .footer__bottom {
@@ -506,6 +522,8 @@ main {
         margin: 5px 25px; }
       .footer__bottom__list__link {
         color: #ffffff; }
+  .footer ul {
+    padding: 0; }
 
 @media screen and (max-width: 1024px) {
   .banner__images__img--front {
@@ -523,7 +541,7 @@ main {
 
 @media screen and (max-width: 767px) {
   .body_grid_1_col {
-    grid-template-rows: 90px auto auto 1fr;
+    grid-template-rows: min-content auto auto 1fr;
     grid-template-columns: 100%; }
   .header {
     grid-template-areas: "nav header__logo header__basket";
@@ -587,7 +605,11 @@ main {
   .footer__top {
     grid-template-columns: 1fr; }
     .footer__top__section {
-      text-align: center; } }
+      text-align: center; }
+  .footer address {
+    margin-bottom: 0; }
+  .footer ul {
+    margin-bottom: 0; } }
 
 @media screen and (max-width: 600px) {
   .restaurants__box {
@@ -597,7 +619,11 @@ main {
     align-items: center; } }
 
 @media screen and (max-width: 480px) {
+  .footer__logo__img {
+    width: 100%; }
   .order__filters {
     width: 90%; }
+  .banner__image {
+    width: 80%; }
   .restaurants__box {
     padding: 6rem 0; } }

@@ -4,6 +4,18 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "Vegur-light";
+	src: url("../fonts/Vegur-Light.otf") format("opentype");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Vegur-regular";
+	src: url("../fonts/Vegur-regular.otf") format("opentype");
+	font-display: swap;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -27,6 +39,10 @@ body {
 	font-family: Kaushan, sans-serif;
 	background-color: $white;
 	font-size: 1.2rem;
+}
+
+p {
+	font-family: Vegur-light, sans-serif;
 }
 
 .body_grid_1_col {
