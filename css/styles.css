@@ -334,8 +334,10 @@ main {
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0.63, 0.22, 0.67, 1.5);
     animation-fill-mode: forwards; }
+    .contact-form__container label {
+      font-family: Vegur-light, sans-serif; }
     .contact-form__container__title {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: #ffffff; }
     .contact-form__container--black {
       background-color: rgba(1, 1, 1, 0.8); }
@@ -351,7 +353,7 @@ main {
   place-items: center;
   place-content: center; }
   .find-us__title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     grid-area: find_us_title; }
   .find-us__map {
     grid-area: find_us_map; }
@@ -365,8 +367,14 @@ main {
       display: flex;
       flex-direction: column;
       gap: 5px; }
-      .find-us__data__section__contact a {
-        color: #931621; }
+      .find-us__data__section__title {
+        font-size: 1.4rem; }
+      .find-us__data__section__contact {
+        font-family: Vegur-regular, sans-serif; }
+        .find-us__data__section__contact a {
+          color: #931621; }
+          .find-us__data__section__contact a:hover {
+            color: #ff8f1f; }
       .find-us__data__section__social__icon {
         width: 30px;
         height: 30px; }
@@ -403,7 +411,9 @@ main {
           gap: 10px;
           padding: 1rem; }
           .menu__box__category__plates__item__img {
-            width: 100%; }
+            width: auto;
+            max-width: 100%;
+            max-height: 160px; }
           .menu__box__category__plates__item__title {
             font-size: 1.6rem; }
           .menu__box__category__plates__item__description {
